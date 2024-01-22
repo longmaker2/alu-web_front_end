@@ -1,15 +1,22 @@
 $list_to_sort: john anna zoe kim felicia carrie;
 
-// Sorting the list
-$sorted_list: sort($list_to_sort);
+$sorted_list: ();
+@for $i from 1 through length($list_to_sort) {
+  $min: null;
+  $minIndex: null;
 
-// Printing the sorted list in the debug output
-@debug $sorted_list;
+  @for $j from 1 through length($list_to_sort) {
+    $current: nth($list_to_sort, $j);
 
-$list_to_sort: john anna zoe kim felicia carrie sylvain ludo bob patrick colin;
+    @if $min == null or $current < $min {
+      $min: $current;
+      $minIndex: $j;
+    }
+  }
 
-// Sorting the list
-$sorted_list: sort($list_to_sort);
+  $sorted_list: append($sorted_list, $min, comma);
+  $list_to_sort: set-nth($list_to_sort, $minIndex, null);
+}
 
 // Printing the sorted list in the debug output
 @debug $sorted_list;
