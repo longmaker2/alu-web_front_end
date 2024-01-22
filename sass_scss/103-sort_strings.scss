@@ -1,5 +1,24 @@
-$list_to_sort: john anna zoe kim felicia carrie;
+// 103-sort_strings.scss
 
-$list_to_sort: sort($list_to_sort);
+// Define the unsorted list
+$list_to_sort: john anna zoe kim felicia carrier;
 
-@debug "Sorted List: #{$list_to_sort}";
+// Sort the list
+$sorted_list: ();
+
+@for $i from 1 through length($list_to_sort) {
+  // Find the minimum value in the unsorted list
+  $min_value: min($list_to_sort...);
+
+  // Find the index of the minimum value
+  $min_index: index($list_to_sort, $min_value);
+
+  // Append the minimum value to the sorted list
+  $sorted_list: append($sorted_list, $min_value, comma);
+
+  // Remove the minimum value from the unsorted list
+  $list_to_sort: remove($list_to_sort, $min_index);
+}
+
+// Print the sorted list in the debug output
+@debug "Sorted List: #{$sorted_list}";
