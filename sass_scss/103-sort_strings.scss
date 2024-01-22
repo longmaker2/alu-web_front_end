@@ -5,3 +5,11 @@ $sorted_list: sort($list_to_sort);
 
 // Printing the sorted list in the debug output
 @debug $sorted_list;
+
+$list_to_sort: john anna zoe kim felicia carrie sylvain ludo bob patrick colin;
+
+// Sorting the list
+$sorted_list: sort($list_to_sort);
+
+// Printing the sorted list in the debug output
+@debug $sorted_list;
