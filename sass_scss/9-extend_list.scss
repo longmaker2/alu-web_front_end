@@ -1,0 +1,17 @@
+%info-style {
+  font-size: 12px;
+}
+
+.info {
+  @extend %info-style;
+}
+
+.success {
+  @extend %info-style;
+  color: #00ff00;
+}
+
+.warning {
+  @extend %info-style;
+  color: #ff0000;
+}
