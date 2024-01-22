@@ -1,0 +1,10 @@
+$color-body: #3d3d3d;
+$color-red: #ff0000;
+
+body {
+  color: $color-body;
+
+  .red {
+    color: $color-red;
+  }
+}
