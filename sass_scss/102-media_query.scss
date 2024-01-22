@@ -1,0 +1,26 @@
+$h1-font-size: 20px;
+$h1-font-size-medium-screen: 18px;
+$h1-font-size-small-screen: 16px;
+$h1-font-size-smallest-screen: 14px;
+
+$h1-small-color: #1d1d1d;
+
+h1 {
+  font-size: $h1-font-size;
+
+  @media screen and (max-width: 960px) {
+    font-size: $h1-font-size-medium-screen;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: $h1-font-size-small-screen;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: $h1-font-size-smallest-screen;
+
+    &.small {
+      color: $h1-small-color;
+    }
+  }
+}
