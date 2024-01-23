@@ -16,47 +16,49 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="0-styles.css" />
+    <link rel="stylesheet" href="9-styles.css" />
   </head>
   <body>
     <!– Header –>
     <header class="header" data-section-theme="dark">
       <div class="container">
-        <div class="header-logo">
-          <a href="#">
-            <img
-              src="images/logo-white.png"
-              alt="Techium logo"
-              width="160"
-              height="40"
-            />
-          </a>
+        <div class="header-container">
+          <div class="header-logo">
+            <a href="#">
+              <img
+                src="images/logo-white.png"
+                alt="Techium logo"
+                width="160"
+                height="40"
+              />
+            </a>
+          </div>
+          <nav class="navbar-menu">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#works" class="nav-link">Works</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#latest_news" class="nav-link">Latest news</a>
+              </li>
+              <li class="nav-item">
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="navbar-menu">
-          <ul class="nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#services" class="nav-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="#works" class="nav-link">Works</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#latest_news" class="nav-link">Latest news</a>
-            </li>
-            <li class="nav-item">
-              <a href="#testimonials" class="nav-link">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
     <!– Main –>
@@ -73,7 +75,7 @@
         </div>
       </section>
       <!– Services section –>
-      <section id="services" class="section">
+      <section id="services" class="section section-services">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Services</h2>
@@ -96,8 +98,6 @@
                   <h3 class="card-title"><a href="#">Content Strategy</a></h3>
                 </div>
               </li>
-            </ul>
-            <ul class="row">
               <li class="col-1-3">
                 <div class="card-services">
                   <h3 class="card-title"><a href="#">UX Design</a></h3>
@@ -118,7 +118,11 @@
         </div>
       </section>
       <!– Works section –>
-      <section id="works" class="section" data-section-theme="dark">
+      <section
+        id="works"
+        class="section section-works"
+        data-section-theme="dark"
+      >
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Works</h2>
@@ -173,7 +177,7 @@
         </div>
       </section>
       <!– About Us section –>
-      <section id="about" class="section">
+      <section id="about" class="section section-about-us">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">About Us</h2>
@@ -220,7 +224,7 @@
         </div>
       </section>
       <!– Latest news section –>
-      <section id="latest_news" class="section">
+      <section id="latest_news" class="section section-latest-news">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Latest News</h2>
@@ -302,7 +306,7 @@
         </div>
       </section>
       <!– Testimonials section –>
-      <section id="testimonial" class="section">
+      <section id="testimonial" class="section section-testimonial">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Testimonials</h2>
@@ -369,7 +373,7 @@
         </div>
       </section>
       <!– Contact section –>
-      <section id="contact" class="section">
+      <section id="contact" class="section section-contact">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Contact</h2>
