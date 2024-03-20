@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 0</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/javascript">
+      // returns the jQuery used
+      try {
+        console.log(jQuery);
+        console.log(typeof jQuery);
+
+        console.log(jQuery());
+        console.log(typeof jQuery());
+
+        console.log(jQuery().jquery);
+        console.log(typeof jQuery().jquery);
+      } catch (e) {
+        console.log(e);
+      }
+      // If jQuery is ready to be used console logs
+      //"jQuery has been loaded correctly" else
+      //"jQuery has not been loaded correctly"
+
+      if ("undefined" == typeof window.jQuery) {
+        console.log("jQuery has not been loaded correctly");
+      } else {
+        console.log("jQuery has been loaded correctly");
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
