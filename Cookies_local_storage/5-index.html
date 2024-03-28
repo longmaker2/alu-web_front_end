@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <script type="application/javascript">
+      const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+      function addItemToCart(item) {
+        window.localStorage.setItem(item, true);
+        displayCart();
+      }
+
+      function createStore() {
+        const items = document.createElement("ul");
+        document.body.appendChild(items);
+
+        for (const item of availableItems) {
+          const cartItem = document.createElement("li");
+          cartItem.innerHTML = item;
+          cartItem.addEventListener("click", function () {
+            addItemToCart(this.innerHTML);
+          });
+          items.appendChild(cartItem);
+        }
+      }
+
+      function displayCart() {
+        if (window.localStorage.length) {
+          let message = document.querySelector("#cart-msg");
+
+          if (!message) {
+            message = document.createElement("p");
+            message.setAttribute("id", "cart-msg");
+            document.body.appendChild(message);
+          }
+          message.innerHTML = `You previously had ${window.localStorage.length} items in your cart`;
+        }
+      }
+
+      if (typeof window.localStorage !== "undefined") {
+        try {
+          window.localStorage.setItem("test", "test");
+          if (window.localStorage.getItem("test") === "test") {
+            window.localStorage.removeItem("test");
+            createStore();
+            displayCart();
+          } else {
+            window.alert(
+              "Sorry, your browser does not support Web storage. Try again with a better one"
+            );
+          }
+        } catch {
+          window.alert(
+            "Sorry, your browser does not support Web storage. Try again with a better one"
+          );
+        }
+      } else {
+        window.alert(
+          "Sorry, your browser does not support Web storage. Try again with a better one"
+        );
+      }
+    </script>
+  </body>
+</html>
